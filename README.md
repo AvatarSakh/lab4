@@ -75,6 +75,30 @@ HTML также не является языком программирован�
 
 <h3>Решение представлено в файлах index.html, server.js, script.js</h3>
 
+https://www.codewars.com/kata/head-tail-init-and-last
+
+![img6](/image/6.png)
+
+https://www.codewars.com/kata/array-deep-count
+
+![img7](/image/7.png)
+
+https://www.codewars.com/kata/length-of-missing-array
+
+![img8](/image/8.png)
+
+https://www.codewars.com/kata/pair-of-gloves
+
+![img9](/image/9.png)
+
+https://www.codewars.com/kata/sorting-by-bits
+
+![img10](/image/10.png)
+
+https://www.codewars.com/kata/lets-recycle
+
+![img11](/image/11.png)
+
 <h4>Вывод: Я научился создавать сайт на Node JS и пользоваться markdown.</h4>
 
 <h3 align="right">Научный руководитель
