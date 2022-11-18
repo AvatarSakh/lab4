@@ -1,0 +1,22 @@
+function recycle(array) {
+  let MassivOutput = new Map([
+    ['paper',[]],
+    ['glass',[]],
+    ['organic',[]],
+    ['plastic',[]]
+  ]);
+  for(let i =0; i<array.length;i++)
+  {
+    let tempMaterial = array[i].material;
+    let tempSecondMaterial = array[i].secondMaterial;
+    if(MassivOutput.has(tempMaterial)){
+      let tempMassiv = MassivOutput.get(tempMaterial);
+      tempMassiv[tempMassiv.length] = array[i].type;
+    }
+    if(MassivOutput.has(tempSecondMaterial)){
+      let tempMassiv = MassivOutput.get(tempSecondMaterial);
+      tempMassiv[tempMassiv.length] = array[i].type;
+    }
+  }
+  return [MassivOutput.get('paper'),MassivOutput.get('glass'),MassivOutput.get('organic'),MassivOutput.get('plastic')];
+}

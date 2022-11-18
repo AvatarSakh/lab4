@@ -1,0 +1,12 @@
+function numberOfPairs(gloves)
+{
+  let countPairs = 0;
+  let ArrayOfCountSameColor = new Map();
+  for(let i = 0; i<gloves.length;i++)
+    {
+      if( ArrayOfCountSameColor.has(gloves[i]) != true) ArrayOfCountSameColor.set(gloves[i],0);
+      ArrayOfCountSameColor.set(gloves[i], ArrayOfCountSameColor.get(gloves[i])+1);
+      if(ArrayOfCountSameColor.get(gloves[i])%2 ==0) countPairs++;
+    }
+  return countPairs;
+}

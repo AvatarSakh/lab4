@@ -1,0 +1,12 @@
+function deepCount(a){
+  console.log(a);
+  var count = a.length;
+  for(var i = 0; i < a.length; i++)
+    {
+      if(a[i].length>0) {
+          var temp = deepCount(a[i]);
+          count += Number(temp);  
+      }
+    }
+    return count;
+  }

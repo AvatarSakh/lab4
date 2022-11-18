@@ -1,0 +1,41 @@
+function sortByBit(arr) {
+  let ArrOfCountBits = [];
+  for(let i =0; i < arr.length; i++)
+    {
+      let bitValue = arr[i].toString(2);
+      let countOneBit = 0;
+      for(let j =0; j<bitValue.length;j++)
+        {
+          if(bitValue[j] == '1') countOneBit++;
+        }
+      ArrOfCountBits[i] = countOneBit;
+    }
+  for(let i =0; i < arr.length;i++){
+    for(let j = i;j<arr.length;j++)
+      {
+        if(ArrOfCountBits[i] > ArrOfCountBits[j]){
+          let temp = ArrOfCountBits[i];
+          ArrOfCountBits[i] = ArrOfCountBits[j];
+          ArrOfCountBits[j] = temp;
+          
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        if(ArrOfCountBits[i] == ArrOfCountBits[j])
+          {
+            if(arr[i] > arr[j])
+              {
+                 let temp = ArrOfCountBits[i];
+                   ArrOfCountBits[i] = ArrOfCountBits[j];
+                  ArrOfCountBits[j] = temp;
+          
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+              }
+          }
+      }
+  }
+  
+}

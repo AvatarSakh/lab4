@@ -1,0 +1,15 @@
+function getLengthOfMissingArray(arrayOfArrays) {
+  if(arrayOfArrays == null) return 0;
+  if(arrayOfArrays.length == 0) return 0;
+  for(var i =0; i<arrayOfArrays.length;i++)
+    {
+      if(arrayOfArrays[i] == null) return 0
+    }
+  arrayOfArrays.sort((a,b) => a.length - b.length);
+  if(arrayOfArrays[0].length == 0) return 0;
+  var minArrayLength = arrayOfArrays[0].length;
+  for(var i =0 ; i<arrayOfArrays.length;i++){
+    if(arrayOfArrays[i].length != i+minArrayLength) return i+minArrayLength;
+  }
+  return 0;
+}

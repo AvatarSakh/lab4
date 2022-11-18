@@ -1,0 +1,16 @@
+function head(x){
+  return x[0];
+}
+function tail(x){
+  var temp = Array.from(x);
+  temp.splice(0,1);
+  return temp;
+}
+function init(x){
+  var temp = Array.from(x);
+  temp.splice(x.length-1,1);
+  return temp;
+}
+function last(x){
+  return x[x.length-1];
+}
